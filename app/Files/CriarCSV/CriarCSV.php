@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Files\CriarCSV;
+
 use App\Files\Delimitadores\DelimitadorPontoEVirgula;
 
 class CriarCSV
