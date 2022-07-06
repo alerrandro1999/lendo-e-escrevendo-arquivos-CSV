@@ -2,9 +2,9 @@
 
 require __DIR__ . '/vendor/autoload.php';
 
-use App\Files\Csv;
+use App\Files\LerCSV\LerCSV;
 
-$dados = Csv::lerArquivo(__DIR__.'/files/leitura.csv', true, ';');
+$dados = LerCSV::lerArquivo(__DIR__.'/files/leitura.csv', true, ';');
 
 echo '<pre>';
 print_r($dados);
