@@ -2,6 +2,8 @@
 
 require __DIR__ . '/vendor/autoload.php';
 
+use App\Files\CriarNomeArquivo\CriarNomeArquivoAleatorio;
+
 use App\Files\CriarCSV\CriarCSV;
 
 $dados = [
@@ -22,6 +24,6 @@ $dados = [
     ]
 ];
 
-$sucesso = CriarCSV::criarArquivo(__DIR__.'/files/escrita.csv', $dados,);
+$sucesso = CriarCSV::criarArquivo(__DIR__.'/files/'.CriarNomeArquivoAleatorio::NomeAleatorio().'.csv', $dados,);
 
  var_dump($sucesso);
