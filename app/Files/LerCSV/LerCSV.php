@@ -2,7 +2,7 @@
 
 namespace App\Files\LerCSV;
 
-use App\Files\Delimitadores\DelimitadorPontoEVirgula;
+use App\Files\Delimitadores\DelimitadoresDosArquivos;
 
 class LerCSV
 {
@@ -17,9 +17,9 @@ class LerCSV
     {
         $this->VerificarSeArquivoExiste($arquivo);
         $csv =  fopen($arquivo, 'r');
-        $cabecalhoDados = $cabecalho ? fgetcsv($csv, 0, DelimitadorPontoEVirgula::delimitador()) : [];
+        $cabecalhoDados = $cabecalho ? fgetcsv($csv, 0, DelimitadoresDosArquivos::delimitador()) : [];
 
-        while ($linha = fgetcsv($csv, 0, DelimitadorPontoEVirgula::delimitador())) {
+        while ($linha = fgetcsv($csv, 0, DelimitadoresDosArquivos::delimitador())) {
             $dados[] = $cabecalho ? array_combine($cabecalhoDados, $linha) : $linha;
         }
         fclose($csv);

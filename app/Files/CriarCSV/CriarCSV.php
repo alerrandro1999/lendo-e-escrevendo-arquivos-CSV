@@ -2,7 +2,7 @@
 
 namespace App\Files\CriarCSV;
 
-use App\Files\Delimitadores\DelimitadorPontoEVirgula;
+use App\Files\Delimitadores\DelimitadoresDosArquivos;
 
 class CriarCSV
 {
@@ -10,7 +10,7 @@ class CriarCSV
     {
         $csv = fopen($arquivo, 'w');
         foreach ($dados as $linha) {
-            fputcsv($csv, $linha, DelimitadorPontoEVirgula::delimitador());
+            fputcsv($csv, $linha, DelimitadoresDosArquivos::delimitador());
         }
         fclose($csv);
         return true;

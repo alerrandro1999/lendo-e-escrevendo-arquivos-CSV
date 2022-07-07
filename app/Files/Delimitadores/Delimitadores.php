@@ -4,5 +4,7 @@ namespace App\Files\Delimitadores;
 
 interface Delimitadores
 {
-    public static function delimitador();
+    public static function delimitadorPontoEVirgula();
+
+    public static function delimitadorVirgula();
 }
